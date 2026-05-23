@@ -8,13 +8,13 @@
   outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
-      version = "1.1.1";
+      version = "1.2.0";
 
       pkgs = import nixpkgs { inherit system; };
 
       src = pkgs.fetchurl {
         url = "https://github.com/TwilitRealm/dusklight/releases/download/v${version}/Dusklight-v${version}-linux-x86_64.AppImage";
-        hash = "sha256-8BtK1XZGHxw2EbbgymV86gvnYPYO6fiZYQdueRs8oWM=";
+        hash = "sha256-CChoFnLwy6VCGPJtktBvwN1+PpTiSmQ1ka2Wycd2NX4=";
       };
 
       extracted = pkgs.appimageTools.extract {
